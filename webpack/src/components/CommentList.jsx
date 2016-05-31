@@ -10,7 +10,6 @@
         <div className="commentList">
           <Comment author="Pete Hunt">Ths is one comment</Comment>
           <Comment author="Jordan Walke">This is *another* comment </Comment>
-         <p>Hello there! I am the comment list</p>
         </div>
       );
     }
