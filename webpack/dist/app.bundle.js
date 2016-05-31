@@ -20327,7 +20327,7 @@
 
 	  var React = __webpack_require__(1);
 	  var CommentList = __webpack_require__(169);
-	  var CommentForm = __webpack_require__(170);
+	  var CommentForm = __webpack_require__(171);
 
 	  module.exports = React.createClass({
 	    displayName: 'exports',
@@ -20335,11 +20335,11 @@
 	    render: function () {
 	      return React.createElement(
 	        'div',
-	        { className: 'commentForm' },
+	        { className: 'commentBox' },
 	        React.createElement(
-	          'p',
+	          'h1',
 	          null,
-	          'I am inside comment box!'
+	          'Comments'
 	        ),
 	        React.createElement(CommentList, null),
 	        React.createElement(CommentForm, null)
@@ -20356,15 +20356,30 @@
 	  'use strict';
 
 	  var React = __webpack_require__(1);
+	  var Comment = __webpack_require__(170);
 
 	  module.exports = React.createClass({
 	    displayName: 'exports',
 
 	    render: function () {
 	      return React.createElement(
-	        'p',
-	        null,
-	        'Hello there! I am the comment list'
+	        'div',
+	        { className: 'commentList' },
+	        React.createElement(
+	          Comment,
+	          { author: 'Pete Hunt' },
+	          'Ths is one comment'
+	        ),
+	        React.createElement(
+	          Comment,
+	          { author: 'Jordan Walke' },
+	          'This is *another* comment '
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          'Hello there! I am the comment list'
+	        )
 	      );
 	    }
 	  });
@@ -20372,6 +20387,29 @@
 
 /***/ },
 /* 170 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+
+	module.exports = React.createClass({
+	  displayName: "exports",
+
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "comment" },
+	      React.createElement(
+	        "h2",
+	        { className: "commentAuthor" },
+	        this.props.author
+	      ),
+	      this.props.children
+	    );
+	  }
+	});
+
+/***/ },
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function () {
@@ -20384,9 +20422,13 @@
 
 	    render: function () {
 	      return React.createElement(
-	        'p',
-	        null,
-	        'Hello there! I am the comment form'
+	        'div',
+	        { className: 'commentForm' },
+	        React.createElement(
+	          'p',
+	          null,
+	          'Hello there! I am the comment form'
+	        )
 	      );
 	    }
 	  });

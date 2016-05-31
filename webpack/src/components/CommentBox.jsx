@@ -8,8 +8,8 @@
   module.exports = React.createClass({
     render: function() {
       return (
-        <div className="commentForm">
-          <p>I am inside comment box!</p>
+        <div className="commentBox">
+          <h1>Comments</h1>
           <CommentList />
           <CommentForm />
         </div>

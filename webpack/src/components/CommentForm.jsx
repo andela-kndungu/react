@@ -6,7 +6,9 @@
   module.exports = React.createClass({
     render: function() {
       return (
-        <p>Hello there! I am the comment form</p>
+        <div className="commentForm">
+          <p>Hello there! I am the comment form</p>
+        </div>
       );
     }
   });
