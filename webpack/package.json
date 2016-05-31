@@ -1,0 +1,35 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "Practice React with Webpack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-kndungu/react.git"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "Kinuthia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-kndungu/react/issues"
+  },
+  "homepage": "https://github.com/andela-kndungu/react#readme",
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "marked": "^0.3.5",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
+    "webpack": "^1.13.1"
+  }
+}
