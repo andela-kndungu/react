@@ -46,21 +46,9 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(38);
+	var CommentBox = __webpack_require__(168);
 
-	var Hello = React.createClass({
-	  displayName: 'Hello',
-
-	  render: function () {
-	    return React.createElement(
-	      'h1',
-	      null,
-	      'Hello World'
-	    );
-	  }
-	});
-
-	ReactDOM.render(React.createElement(Hello, null), document.getElementById('content'));
-	console.log('dfg');
+	ReactDOM.render(React.createElement(CommentBox, null), document.getElementById('content'));
 
 /***/ },
 /* 1 */
@@ -20329,6 +20317,80 @@
 	var ReactMount = __webpack_require__(160);
 
 	module.exports = ReactMount.renderSubtreeIntoContainer;
+
+/***/ },
+/* 168 */
+/***/ function(module, exports, __webpack_require__) {
+
+	(function () {
+	  'use strict';
+
+	  var React = __webpack_require__(1);
+	  var CommentList = __webpack_require__(169);
+	  var CommentForm = __webpack_require__(170);
+
+	  module.exports = React.createClass({
+	    displayName: 'exports',
+
+	    render: function () {
+	      return React.createElement(
+	        'div',
+	        { className: 'commentForm' },
+	        React.createElement(
+	          'p',
+	          null,
+	          'I am inside comment box!'
+	        ),
+	        React.createElement(CommentList, null),
+	        React.createElement(CommentForm, null)
+	      );
+	    }
+	  });
+	})();
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	(function () {
+	  'use strict';
+
+	  var React = __webpack_require__(1);
+
+	  module.exports = React.createClass({
+	    displayName: 'exports',
+
+	    render: function () {
+	      return React.createElement(
+	        'p',
+	        null,
+	        'Hello there! I am the comment list'
+	      );
+	    }
+	  });
+	})();
+
+/***/ },
+/* 170 */
+/***/ function(module, exports, __webpack_require__) {
+
+	(function () {
+	  'use strict';
+
+	  var React = __webpack_require__(1);
+
+	  module.exports = React.createClass({
+	    displayName: 'exports',
+
+	    render: function () {
+	      return React.createElement(
+	        'p',
+	        null,
+	        'Hello there! I am the comment form'
+	      );
+	    }
+	  });
+	})();
 
 /***/ }
 /******/ ]);
