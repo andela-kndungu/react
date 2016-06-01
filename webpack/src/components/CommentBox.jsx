@@ -1,19 +1,17 @@
-(function() {
-  'use strict';
+import React from 'react';
+import CommentList from './CommentList.jsx';
+import CommentForm from './CommentForm.jsx';
 
-  var React = require('react');
-  var CommentList = require('./CommentList.jsx');
-  var CommentForm = require('./CommentForm.jsx');
-
-  module.exports = React.createClass({
-    render: function() {
-      return (
-        <div className="commentBox">
-          <h1>Comments</h1>
-          <CommentList />
-          <CommentForm />
-        </div>
-      );
-    }
-  });
-})();
+export default class CommentBox extends React.Component {
+	render() {
+		return (
+			<div className="commentBox">
+				<h1>
+					Comments
+				</h1>
+				<CommentList />
+				<CommentForm />
+			</div>
+		);
+	}
+}

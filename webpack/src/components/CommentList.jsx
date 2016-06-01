@@ -1,17 +1,13 @@
-(function() {
-  'use strict';
+import React from 'react';
+import Comment from './Comment.jsx';
 
-  var React = require('react');
-  var Comment = require('./Comment.jsx');
-
-  module.exports = React.createClass({
-    render: function() {
-      return (
-        <div className="commentList">
-          <Comment author="Pete Hunt">Ths is one comment</Comment>
-          <Comment author="Jordan Walke">This is *another* comment </Comment>
-        </div>
-      );
-    }
-  });
-})();
+export default class CommentList extends React.Component{
+	render() {
+		return (
+			<div className="commentList">
+				<Comment author="Pete Hunt">This is one comment</Comment>
+				<Comment author="Jordan Walke">This is *another* comment</Comment>
+			</div>
+		);
+	}
+};

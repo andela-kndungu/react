@@ -9,11 +9,11 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      include: path.join(__dirname,'src'),
+      include: path.join(__dirname, 'src'),
       loader: 'babel-loader',
       query: {
-          presets: ['react']
-        }
+        presets: ['es2015', 'react']
+      }
     }]
   }
 };

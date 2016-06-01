@@ -1,15 +1,11 @@
-(function() {
-  'use strict';
+import React from 'react';
 
-  var React = require('react');
-
-  module.exports = React.createClass({
-    render: function() {
-      return (
-        <div className="commentForm">
-          <p>Hello there! I am the comment form</p>
-        </div>
-      );
-    }
-  });
-})();
+export default class CommentForm extends React.Component {
+  render() {
+    return (
+      <div className="commentForm">
+        <p>Hello there! I am the comment form</p>
+      </div>
+		);
+  }
+}

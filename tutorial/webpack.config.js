@@ -39,8 +39,8 @@
     module: {
       loaders: [{
         test: /\.js$/,
-        include: './src/',
-        loader: 'babel-loader',
+        include: /src/,
+        loader: 'babel',
       }],
     },
   };
