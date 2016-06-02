@@ -30,11 +30,11 @@ export default class CommentForm extends React.Component {
 			return;
 		}
 
-		this.props.onCommentSubmit({author: author, comment: comment});
+		this.props.onCommentSubmit({author: author, text: comment});
 		this.setState({author: '', comment:''});
 	}
 
-  render() {
+ render() {
     return (
 			<form className="commentForm" onSubmit={this.handleSubmit}>
 				<input

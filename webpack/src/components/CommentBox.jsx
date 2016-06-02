@@ -12,12 +12,13 @@ export default class CommentBox extends React.Component {
 		};
 
 		this.loadCommentsFromServer = this.loadCommentsFromServer.bind(this);
+		this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
 	}
 	
 	loadCommentsFromServer() {
 		const _this = this;
 		$.ajax({
-			url: this.props.url,
+			url: _this.props.url,
 			dataType: 'json',
 			cache: false,
 			success(data) {
@@ -30,8 +31,19 @@ export default class CommentBox extends React.Component {
 	}
 
 	handleCommentSubmit(comment) {
-		console.log(comment);
-		// TODO: Send to server
+		const _this = this;
+		$.ajax({
+			url: _this.props.url,
+			dataType: 'json',
+			type: 'POST',
+			data: comment,
+			success(data) {
+				_this.setState({data:data})
+			},
+			error(xhr, status, err) {
+				console.log(this.props.url, status, err.toString());
+			}
+		});
 	}
 
 	componentDidMount() {

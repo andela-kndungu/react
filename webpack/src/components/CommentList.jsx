@@ -6,7 +6,7 @@ export default class CommentList extends React.Component{
 		let data = this.props.data;
 		const commentNodes = data.map((comment) => (
 			<Comment author={comment.author} key={comment.id}>
-				{comment.text}
+				{comment.text?comment.text:'placeholder'}
 			</Comment>
 		));
 
