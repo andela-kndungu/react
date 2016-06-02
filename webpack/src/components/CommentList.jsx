@@ -9,6 +9,7 @@ export default class CommentList extends React.Component{
 				{comment.text}
 			</Comment>
 		));
+
 		return (
 			<div className="commentList">
 				{commentNodes}
