@@ -20350,9 +20350,13 @@
 
 	var _CommentList2 = _interopRequireDefault(_CommentList);
 
-	var _CommentForm = __webpack_require__(173);
+	var _CommentForm = __webpack_require__(172);
 
 	var _CommentForm2 = _interopRequireDefault(_CommentForm);
+
+	var _data = __webpack_require__(173);
+
+	var _data2 = _interopRequireDefault(_data);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20382,7 +20386,7 @@
 						null,
 						'Comments'
 					),
-					_react2.default.createElement(_CommentList2.default, null),
+					_react2.default.createElement(_CommentList2.default, { data: _data2.default }),
 					_react2.default.createElement(_CommentForm2.default, null)
 				);
 			}
@@ -20413,10 +20417,6 @@
 
 	var _Comment2 = _interopRequireDefault(_Comment);
 
-	var _data = __webpack_require__(172);
-
-	var _data2 = _interopRequireDefault(_data);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20437,7 +20437,8 @@
 		_createClass(CommentList, [{
 			key: 'render',
 			value: function render() {
-				var commentNodes = _data2.default.map(function (comment) {
+				var data = this.props.data;
+				var commentNodes = data.map(function (comment) {
 					return _react2.default.createElement(
 						_Comment2.default,
 						{ author: comment.author, key: comment.id },
@@ -21820,18 +21821,6 @@
 
 /***/ },
 /* 172 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	var data = [{ id: 1, author: 'Pete Hunt', text: 'This is one comment' }, { id: 2, author: 'Jordan Walke', text: 'This is *another* comment' }];
-	exports.default = data;
-
-/***/ },
-/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21882,6 +21871,18 @@
 	}(_react2.default.Component);
 
 	exports.default = CommentForm;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	var data = [{ id: 1, author: 'Pete Hunt', text: 'This is one comment' }, { id: 2, author: 'Jordan Walke', text: 'This is *another* comment' }];
+	exports.default = data;
 
 /***/ }
 /******/ ]);

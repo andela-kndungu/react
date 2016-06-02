@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentList from './CommentList.jsx';
 import CommentForm from './CommentForm.jsx';
+import data from '../data.js';
 
 export default class CommentBox extends React.Component {
   render() {
@@ -9,7 +10,7 @@ export default class CommentBox extends React.Component {
 				<h1>
 					Comments
 				</h1>
-				<CommentList />
+				<CommentList data={data} />
 				<CommentForm />
 			</div>
 		);
