@@ -29,6 +29,11 @@ export default class CommentBox extends React.Component {
 		});
 	}
 
+	handleCommentSubmit(comment) {
+		console.log(comment);
+		// TODO: Send to server
+	}
+
 	componentDidMount() {
 		this.loadCommentsFromServer();
 		setInterval(this.loadCommentsFromServer, this.props.pollInterval);
@@ -40,8 +45,12 @@ export default class CommentBox extends React.Component {
 				<h1>
 					Comments
 				</h1>
-				<CommentList data={this.state.data} />
-				<CommentForm />
+				<CommentList
+					data={this.state.data}
+				/>
+				<CommentForm 
+					onCommentSubmit={this.handleCommentSubmit} 
+				/>
 			</div>
 		);
 	}

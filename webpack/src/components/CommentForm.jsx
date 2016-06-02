@@ -30,8 +30,7 @@ export default class CommentForm extends React.Component {
 			return;
 		}
 
-		// TODO: send request to server
-
+		this.props.onCommentSubmit({author: author, comment: comment});
 		this.setState({author: '', comment:''});
 	}
 
