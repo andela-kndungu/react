@@ -2,15 +2,15 @@ var path = require('path');
 
 module.exports = {
 	devtool: 'eval-source-map',
-  entry: './src/app.jsx',
+  entry: './js/app.js',
   output: {
-    path: './dist',
-    filename: 'app.bundle.js'
+    path: './js',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'js'),
       loader: 'babel-loader',
       query: {
         presets: ['es2015', 'react']
@@ -18,3 +18,4 @@ module.exports = {
     }]
   }
 };
+
